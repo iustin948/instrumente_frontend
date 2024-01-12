@@ -3,7 +3,29 @@
 .wrapper
 {
     margin-top: 30px;
-    width: 80%;
+    width: 100;
+    padding-right: 140px;
+    padding-left: 140px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+    button,
+    input {
+        /* CSS to Reset */
+    }
+}
+
+:root {
+    --primary: #0024DE;
+    --white: #ffffff;
+  }
+
+  body .ui-button.rounded-button {
+    border-radius: 2rem;
 }
