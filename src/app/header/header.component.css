@@ -7,6 +7,12 @@
 {
     height:100px;
 }
+.category_bar 
+{
+    margin-right: 10px;
+    display:flex;
+    justify-content: space-evenly;
+}
 
 .header
 {

@@ -9,6 +9,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CardComponent } from "./card/card.component";
+import { GalleriaModule } from 'primeng/galleria';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CardComponent } from "./card/card.component";
         AppRoutingModule,
         ButtonModule,
         CardModule,
-        CardComponent
+        CardComponent,
+        GalleriaModule
     ]
 })
 export class AppModule { }
