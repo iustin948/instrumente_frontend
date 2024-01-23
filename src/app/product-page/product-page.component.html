@@ -4,9 +4,9 @@
   <div class="product_info">
 
     <div class="photo">
-      <p-galleria [value]="images" [showItemNavigators]="true"  [circular]="true" [numVisible]="5" [containerStyle]="{ 'max-width': '640px' }">
+      <p-galleria [value]="images" [showItemNavigators]="true"  [circular]="true" [numVisible]="5" [containerStyle]="{ 'max-width': '900px' }" >
         <ng-template pTemplate="item" let-item>
-            <img [src]="item.source" style="width: 100%; display: block;" />
+            <img [src]="item.source" style="width: 70%; display: block;" />
         </ng-template>
         <ng-template pTemplate="thumbnail" let-item>
             <div class="grid grid-nogutter justify-content-center">
@@ -20,8 +20,24 @@
       <p class="title">Fender MIJ Aerodyne Special Telecaster 2022 - Present - Hot Rod Burst</p>
       <p class="condition">&nbsp; Used - Good&nbsp;    </p>
       <p class="title">7000 lei</p>
+
+      <div class="button-menu">    
+        <button pButton class="margin mesaj">Trimite mesaj</button>
+        <button pButton class="margin offer p-button-outlined">Offer</button>
+        <button pButton class="margin offer p-button-outlined">Watch</button>
+        
+      </div>
+
+      <div class="meta-data description">
+        <div> <b>Postat</b> acum 25 de zile</div>
+        <div> <b>Vizionari:</b> 2145</div>
+        <div> <b>Favorit:</b> 354</div>
+      </div>
+
       <hr>
+
       <p>Descriere</p>
+
       <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, optio? Autem eum inventore dolore quasi exercitationem voluptates quae ipsa rerum officiis impedit hic reiciendis doloremque et, odit dolorem adipisci aliquid? Laborum blanditiis eius, aperiam corrupti facilis magni inventore quo. Reprehenderit quas harum at aut explicabo accusamus modi suscipit ex voluptatibus? Qui aperiam officia soluta fugit laborum delectus nisi architecto! Dolorum veritatis eum cumque molestiae ipsam ea nesciunt sunt cupiditate, obcaecati repudiandae repellat! Quis, corrupti incidunt?</p>
       <div class="product-buttons">
        <p-button>Trimite mesaj</p-button>
@@ -32,6 +48,7 @@
         <p>Listing date: 12.12.2012</p>
       </div>
     </div>
+    
   </div>
 </div>
 

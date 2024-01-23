@@ -6,6 +6,7 @@
     display:flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -15,13 +16,46 @@ p
     margin:8px;
 }
 
+.button-menu
+{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width:100%;
+    
+}
 
+.margin
+{
+    margin-top:10px;
+}
 
+.mesaj
+{
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+}
 
+.meta-data
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.offer
+{
+    width:49%;
+}
 .product_description
 {
-    width: 50%;
+    width: 37%;
     padding-left: 40px;
+    
 }
 
 .title
