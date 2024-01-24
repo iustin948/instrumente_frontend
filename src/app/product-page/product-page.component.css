@@ -10,6 +10,10 @@
 }
 
 
+.photo
+{
+    background-color: rgb(205, 204, 204);
+}
 
 p
 {
@@ -85,3 +89,46 @@ p
     border-radius: 15px;
     display: inline-block   ;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 25px;
+    margin-top: 30px;
+    max-width:900px;
+    width:70%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .profile-picture-small
+  {
+    width:80px;
+    border-radius: 50%;
+  }
+
+  .seller-visit-card
+  
+  {
+    margin-top: 30px;
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    border-radius: 20px;
+   background-color : rgb(228, 228, 255);
+  }
+
+  .stars
+  {
+    width:100px;
+    height: 20px;
+  }
