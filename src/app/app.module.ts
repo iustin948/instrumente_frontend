@@ -10,15 +10,21 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CardComponent } from "./card/card.component";
 import { GalleriaModule } from 'primeng/galleria';
-
+import { SearchPageComponent } from './search-page/search-page.component';
+import { ScrollerModule } from 'primeng/scroller';
+import { SliderModule } from 'primeng/slider';
+import { FormsModule } from '@angular/forms'; 
+import { InputTextModule } from 'primeng/inputtext';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
-    declarations: [
+    declarations: [	
         AppComponent,
         HomePageComponent,
         HeaderComponent,
-        ProductPageComponent
-    ],
+        ProductPageComponent,
+      SearchPageComponent
+   ],
     providers: [],
     bootstrap: [AppComponent],
     imports: [
@@ -27,7 +33,12 @@ import { GalleriaModule } from 'primeng/galleria';
         ButtonModule,
         CardModule,
         CardComponent,
-        GalleriaModule
+        GalleriaModule,
+        ScrollerModule,
+        SliderModule,
+        FormsModule,
+        InputTextModule,
+        PaginatorModule
     ]
 })
 export class AppModule { }

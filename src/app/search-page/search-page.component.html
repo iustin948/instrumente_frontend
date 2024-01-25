@@ -1,0 +1,76 @@
+<div class="wrapper ">
+  <div class="search-flex">
+    <div class="filter-bar">
+      <div class="category"> 
+        <div class="category-title">
+            Toate categoriile
+          </div>
+          <div class="elements">
+            <p-scroller [items]="items" [itemSize]="10" scrollHeight="300px" >
+              <ng-template pTemplate="item" let-item let-options="options">
+                  <div class="flex align-items-center p-2"  style="height: 50px;">{{ item }}</div>
+              </ng-template>
+          </p-scroller>
+          </div>
+      </div>
+        <hr>
+        <div class="category"> 
+          <div class="category-title">
+              Pret
+            </div>
+            <div class="elements">
+              <p-slider [(ngModel)]="rangeValues" [range]="true"></p-slider>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="category"> 
+          <div class="category-title">
+              Locatie
+            </div>
+            <div class="elements">
+              <input pInputText type="text" class="p-inputtext-lg" placeholder="Large"  style="width: 230px;" />
+            </div>
+        </div>
+
+    </div>
+    <div class="results">
+      <div class="cards">
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+      
+      </div>
+
+      <div class="" style="width:100%">
+        <div class="flex align-items-center justify-content-center " style="margin:20px">
+          <span class="mx-1 text-color">Items per page: </span>
+          <p-dropdown [options]="options" optionLabel="label" optionValue="value" [(ngModel)]="rows2" (ngModelChange)="first2 = 0"></p-dropdown>
+        
+        </div>
+    
+        <div class="flex align-items-center justify-content-center" style="margin-bottom: 70px;">
+        
+          <p-paginator (onPageChange)="onPageChange3($event)" [first]="first3" [rows]="rows3" [totalRecords]="totalRecords" [showFirstLastIcon]="false" 
+              [showCurrentPageReport]="true" currentPageReportTemplate="{first} - {last} of {totalRecords}" ></p-paginator>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+

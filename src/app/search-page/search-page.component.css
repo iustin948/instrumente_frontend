@@ -1,0 +1,57 @@
+.filter-bar
+{
+    border-style:  double;
+    border-width: 1px;
+    border-color: black;
+    width:300px;
+    height:650px;
+    margin-right:20px;
+    margin-top:20px;
+    
+}
+
+.category-title
+{
+    font-size:larger;
+    font-weight: 600;
+    margin-bottom: 20px;
+    
+}
+
+.category
+{
+    margin:20px
+}
+
+.elements
+{
+
+}
+
+.single-element
+{
+    margin:10px
+}
+
+.search-results
+{
+
+}
+
+.search-flex
+{
+    display:flex;
+    
+}
+
+.cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    flex-direction: row;
+    width:1200px;
+    margin: auto;
+    
+
+}

@@ -17,7 +17,10 @@
 
 p
 {
-    margin:8px;
+    margin-bottom:16px;
+    margin-top: 0;
+    padding-top: 0;
+
 }
 
 .button-menu
@@ -57,7 +60,7 @@ p
 }
 .product_description
 {
-    width: 37%;
+    width: 40%;
     padding-left: 40px;
     
 }
@@ -93,26 +96,27 @@ p
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
+   
     width: 100%;
     font-size: 25px;
     margin-top: 30px;
     max-width:900px;
-    width:70%;
+    width:600px;
   }
   
   td, th {
-    border: 1px solid #dddddd;
+   
     text-align: left;
     padding: 8px;
+    border: none;
+    font-size: 16px;
   }
   
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+
 
   .profile-picture-small
   {
-    width:80px;
+    width:70px;
     border-radius: 50%;
   }
 
@@ -120,15 +124,28 @@ table {
   
   {
     margin-top: 30px;
-    display:flex;
+  
     flex-direction:row;
     width:100%;
     border-radius: 20px;
-   background-color : rgb(228, 228, 255);
+  
   }
 
   .stars
   {
+    margin-top: 9.6px;
     width:100px;
     height: 20px;
   }
+
+  .cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    flex-direction: row;
+    width:1600px;
+    
+    
+
+}
