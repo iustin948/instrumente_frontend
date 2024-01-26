@@ -34,3 +34,20 @@ body
     background-color: #f5f5f5;
     margin:0;
 }
+
+
+.p-megamenu {
+    padding:  0;
+    background: inherit ;
+    color: #4b5563;
+     border: none;
+    
+}
+
+.p-megamenu.p-megamenu-horizontal .p-megamenu-root-list > .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+    color: #000000;
+}
+
+.p-icon-wrapper {
+    display: none;
+}

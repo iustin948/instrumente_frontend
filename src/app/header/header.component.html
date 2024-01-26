@@ -1,21 +1,28 @@
 
 <div class="wrapper header">
+  
     <div class="" ><img class = 'logo'src="assets/logo.png" alt="logo"></div>
-    
-    <div class="search-group" >
       
-      <input class ='search-field' type="text">
-      <div class="search-button">
-        <img src="/assets/search-icon.svg" style="height:24px; ">
+      <div class="search-group" >
+        
+        <input class ='search-field' type="text">
+        <div class="search-button">
+          <img src="/assets/search-icon.svg" style="height:24px; ">
+        </div>
       </div>
+      
+      <div class="account-nav">  
+        <img src="/assets/heart.svg" class="svg" >
+        <img src="/assets/mail.svg" class="svg">
+        <p-button label="Contecteaza-te"[outlined]="true"  ></p-button>
+        <p-button label="Adauga anunt"></p-button>
     </div>
-    
-    <div class="account-nav">  
-      <img src="/assets/heart.svg" class="svg" >
-      <img src="/assets/mail.svg" class="svg">
-      <p-button label="Contecteaza-te"[outlined]="true"  ></p-button>
-      <p-button label="Adauga anunt"></p-button>
-  </div>
+  
 </div>
+<hr>
+<div class="menu-bar">
+  <p-megaMenu [model]="items"></p-megaMenu>
+</div>
+<hr>
 
 

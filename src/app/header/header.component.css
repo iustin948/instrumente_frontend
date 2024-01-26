@@ -5,7 +5,7 @@
 
 .logo
 {
-    height:100px;
+    height:80px;
 }
 .category_bar 
 {
@@ -70,4 +70,26 @@
 {
     height:24px;
     
+}
+
+.menu-bar
+{
+    width:100%;
+    
+    display:flex;
+    justify-content: center;
+    
+}
+
+.menu-bar div 
+{
+    width:100px;
+}
+
+.p-megamenu {
+    padding: 0.5rem;
+    background: #122e49;
+    color: #4b5563;
+    /* border: 1px solid #e5e7eb; */
+    border-radius: 6px;
 }

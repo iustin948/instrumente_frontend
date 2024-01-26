@@ -16,6 +16,9 @@ import { SliderModule } from 'primeng/slider';
 import { FormsModule } from '@angular/forms'; 
 import { InputTextModule } from 'primeng/inputtext';
 import { PaginatorModule } from 'primeng/paginator';
+import { MegaMenuModule } from 'primeng/megamenu';
+
+
 
 @NgModule({
     declarations: [	
@@ -38,7 +41,8 @@ import { PaginatorModule } from 'primeng/paginator';
         SliderModule,
         FormsModule,
         InputTextModule,
-        PaginatorModule
+        PaginatorModule,
+        MegaMenuModule
     ]
 })
 export class AppModule { }
