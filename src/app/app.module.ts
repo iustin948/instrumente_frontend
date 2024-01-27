@@ -17,8 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { PaginatorModule } from 'primeng/paginator';
 import { MegaMenuModule } from 'primeng/megamenu';
-
-
+import { DialogModule } from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [	
@@ -42,7 +42,9 @@ import { MegaMenuModule } from 'primeng/megamenu';
         FormsModule,
         InputTextModule,
         PaginatorModule,
-        MegaMenuModule
+        MegaMenuModule,
+        DialogModule,
+        BrowserAnimationsModule
     ]
 })
 export class AppModule { }

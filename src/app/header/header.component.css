@@ -93,3 +93,6 @@
     /* border: 1px solid #e5e7eb; */
     border-radius: 6px;
 }
+.ng-star-inserted{
+   backdrop-filter: blur(2px);
+}
