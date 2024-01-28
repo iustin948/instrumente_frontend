@@ -147,7 +147,3 @@ table {
     width:1600px;
 }
 
-.p-dialog-mask 
-{
-    filter: blur(2px);
-}

@@ -15,6 +15,16 @@
         <img src="/assets/heart.svg" class="svg" >
         <img src="/assets/mail.svg" class="svg">
         <p-button (click)="showDialog()" icon="pi pi-user" label="Login"></p-button>
+    
+        <p-button label="Adauga anunt"></p-button>
+    </div>
+  
+</div>
+<hr>
+<div class="menu-bar">
+  <p-megaMenu [model]="items"></p-megaMenu>
+</div>
+<hr>
 <p-dialog [(visible)]="visible">
     <ng-template pTemplate="headless" >
         <div class="flex flex-column px-8 py-5 gap-4" style=" border-radius: 12px; background-image: radial-gradient(circle at left top, var(--primary-400), var(--primary-700))">
@@ -62,14 +72,5 @@
         </div>
     </ng-template>
 </p-dialog>
-        <p-button label="Adauga anunt"></p-button>
-    </div>
-  
-</div>
-<hr>
-<div class="menu-bar">
-  <p-megaMenu [model]="items"></p-megaMenu>
-</div>
-<hr>
 
 
