@@ -20,6 +20,8 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { SellerPageComponent } from './seller-page/seller-page.component';
 import { TabViewModule } from 'primeng/tabview';
 
+import { DialogModule } from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [		
@@ -45,7 +47,9 @@ import { TabViewModule } from 'primeng/tabview';
         InputTextModule,
         PaginatorModule,
         MegaMenuModule,
-        TabViewModule
+        TabViewModule,
+        DialogModule,
+        BrowserAnimationsModule
     ]
 })
 export class AppModule { }

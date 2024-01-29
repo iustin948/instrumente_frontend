@@ -1,16 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { MegaMenuItem } from 'primeng/api';
-
+import { ElementRef } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+closeDialog() {
+  this.visible = false;
+}
+showDialog() {
+  this.visible = true;
+  console.log(this.visible);
+}
+
 items: MegaMenuItem[];
+visible: boolean;
   
 
-  constructor() {
+  constructor(private el: ElementRef) {
+    this.visible = false;
     this.items = [ 
          { 
         label: 'Categorie', 
