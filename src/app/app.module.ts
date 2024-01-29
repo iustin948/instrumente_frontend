@@ -17,16 +17,18 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { PaginatorModule } from 'primeng/paginator';
 import { MegaMenuModule } from 'primeng/megamenu';
-
+import { SellerPageComponent } from './seller-page/seller-page.component';
+import { TabViewModule } from 'primeng/tabview';
 
 
 @NgModule({
-    declarations: [	
+    declarations: [		
         AppComponent,
         HomePageComponent,
         HeaderComponent,
         ProductPageComponent,
-      SearchPageComponent
+      SearchPageComponent,
+      SellerPageComponent
    ],
     providers: [],
     bootstrap: [AppComponent],
@@ -42,7 +44,8 @@ import { MegaMenuModule } from 'primeng/megamenu';
         FormsModule,
         InputTextModule,
         PaginatorModule,
-        MegaMenuModule
+        MegaMenuModule,
+        TabViewModule
     ]
 })
 export class AppModule { }

@@ -1,0 +1,103 @@
+<div class="wrapper">
+<p-tabView>
+  <p-tabPanel header="Anunturi">
+    <p-tabView>
+      <p-tabPanel header="Active">
+         
+            <div class="cards">
+              <app-card></app-card>
+              <app-card></app-card>
+              <app-card></app-card>
+              <app-card></app-card>
+              <app-card></app-card>
+              <app-card></app-card>
+            </div>
+          
+      </p-tabPanel>
+      <p-tabPanel header="Inactive">
+        <div class="cards">
+          <app-card></app-card>
+          <app-card></app-card>
+          <app-card></app-card>
+          <app-card></app-card>
+          <app-card></app-card>
+          <app-card></app-card>
+        </div>
+      </p-tabPanel>
+      
+  </p-tabView>
+     
+    
+  </p-tabPanel>
+  <p-tabPanel header="Setari">
+    <header>
+      <h1>User Profile</h1>
+  </header>
+
+  <div class="container">
+      <form action="#" method="post" enctype="multipart/form-data">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+          <label for="profilePicture">Profile Picture:</label>
+          <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Your Password" required>
+
+          <button type="submit">Save Changes</button>
+      </form>
+  </div>
+  </p-tabPanel>
+  <p-tabPanel header="Mesaje">
+    <header>
+      <h1>Messaging App</h1>
+  </header>
+
+  <div class="container">
+      <div id="contacts">
+          <div class="contact">John Doe</div>
+          <div class="contact">Jane Smith</div>
+          <div class="contact">Bob Johnson</div>
+          <!-- Add more contacts as needed -->
+      </div>
+
+      <div id="messages">
+         <p>hello</p>
+      </div>
+
+      <div id="inputBox">
+          <input type="text" id="messageInput" placeholder="Type your message...">
+          <button id="sendButton" onclick="sendMessage()">Send</button>
+      </div>
+  </div>
+
+  <script>
+      function sendMessage() {
+          // Add logic to send the message (for example, append it to the messages div)
+          const messageInput = document.getElementById('messageInput').value;
+          const messagesContainer = document.getElementById('messages');
+          const newMessage = document.createElement('div');
+          newMessage.textContent = 'You: ' + messageInput;
+          messagesContainer.appendChild(newMessage);
+          // Clear the input field
+          document.getElementById('messageInput').value = '';
+      }
+  </script>
+  </p-tabPanel>
+  <p-tabPanel header="Favorite">
+    <div class="cards">
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+    </div>
+  </p-tabPanel>
+</p-tabView>
+
+</div>
