@@ -49,3 +49,33 @@
 {
     radius:5px;
 }
+
+.bannerr {
+   
+    background-image: url('https://iili.io/JcLdGGp.png');
+    background-size: cover;
+    color: #fff; /* Text color */
+    padding: 40px 20px;
+    text-align: center;
+    margin:auto;
+    height:400px;
+    background-color: black;
+    width:2000px;
+    background-position: 50% 50%
+}
+
+.banner-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bannerr h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.bannerr p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    opacity: 0.8;
+}
