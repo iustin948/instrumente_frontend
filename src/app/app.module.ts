@@ -19,7 +19,7 @@ import { PaginatorModule } from 'primeng/paginator';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { SellerPageComponent } from './seller-page/seller-page.component';
 import { TabViewModule } from 'primeng/tabview';
-
+import { BadgeModule } from 'primeng/badge';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -49,7 +49,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MegaMenuModule,
         TabViewModule,
         DialogModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        BadgeModule
     ]
 })
 export class AppModule { }
