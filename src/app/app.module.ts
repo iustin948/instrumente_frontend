@@ -23,16 +23,18 @@ import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SellerPageComponent } from './seller-page/seller-page.component';
 import { SellerProfileComponent } from './seller-profile/seller-profile.component';
+import { AddProductFormComponent } from './add-product-form/add-product-form.component';
 
 @NgModule({
-    declarations: [			
+    declarations: [				
         AppComponent,
         HomePageComponent,
         HeaderComponent,
         ProductPageComponent,
       SearchPageComponent,
       SellerProfileComponent,
-      SellerPageComponent
+      SellerPageComponent,
+      AddProductFormComponent
    ],
     providers: [],
     bootstrap: [AppComponent],

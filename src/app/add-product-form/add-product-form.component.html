@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Adauga un Anunt</h1>
+  <form action="#" method="post">
+      <label for="titlu">Titlu:</label>
+      <input type="text" id="titlu" name="titlu" required>
+
+      <label for="descriere">Descriere:</label>
+      <textarea id="descriere" name="descriere" rows="4" required></textarea>
+
+      <label for="pret">Pret:</label>
+      <input type="text" id="pret" name="pret" required>
+
+      <label for="categorie">Categorie:</label>
+      <select id="categorie" name="categorie" required>
+          <option value="electronice">Electronice</option>
+          <option value="imobiliare">Imobiliare</option>
+          <option value="vehicule">Vehicule</option>
+          <!-- Adăugați mai multe opțiuni de categorie aici -->
+
+      </select>
+
+      <label for="imagini">Imagini (URL separate prin virgulă):</label>
+      <input type="text" id="imagini" name="imagini" required>
+
+      <button type="submit">Adauga Anunt</button>
+  </form>
+</div>
