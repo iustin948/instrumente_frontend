@@ -1,0 +1,51 @@
+<header>
+  <h1>User Profile Page</h1>
+</header>
+<div class="wrapper">
+<div class="profile-banner">
+  <img src="https://www.shutterstock.com/shutterstock/photos/1969183987/display_1500/stock-photo-head-shot-portrait-smiling-confident-millennial-man-looking-at-camera-standing-at-home-happy-1969183987.jpg" alt="User Profile Picture" class="profile-pic">
+  <div class="user-info">
+      <p>User Rating: <span class="star-rating">4.5</span></p>
+      <p>User Location: City, Country</p>
+      <p-button label="Message"></p-button>
+  </div>
+</div>
+
+
+
+
+<p-tabView>
+  <p-tabPanel header="Anunturi">
+    <h2>User Products</h2>
+    <div class="user-products">
+        <div class="cards">
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+      </div>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Recenzii">
+    <div class="user-reviews">
+      <h2>User Reviews</h2>
+    
+      <div class="review">
+          <div class="reviewer-info">
+              <img src="https://www.shutterstock.com/shutterstock/photos/1969183987/display_1500/stock-photo-head-shot-portrait-smiling-confident-millennial-man-looking-at-camera-standing-at-home-happy-1969183987.jpg" alt="Reviewer Profile Picture" class="reviewer-pic">
+              <p>Reviewer Name</p>
+          </div>
+          <p class="star-rating">Rating: 4</p>
+          <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="time-ago">3 days ago</p>
+      </div>
+    
+      <!-- Add more reviews here -->
+    
+    </div>
+  </p-tabPanel>
+  
+</p-tabView>
+</div>

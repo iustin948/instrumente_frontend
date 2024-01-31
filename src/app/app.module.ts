@@ -17,19 +17,21 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { PaginatorModule } from 'primeng/paginator';
 import { MegaMenuModule } from 'primeng/megamenu';
-import { SellerPageComponent } from './seller-page/seller-page.component';
 import { TabViewModule } from 'primeng/tabview';
 import { BadgeModule } from 'primeng/badge';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SellerPageComponent } from './seller-page/seller-page.component';
+import { SellerProfileComponent } from './seller-profile/seller-profile.component';
 
 @NgModule({
-    declarations: [		
+    declarations: [			
         AppComponent,
         HomePageComponent,
         HeaderComponent,
         ProductPageComponent,
       SearchPageComponent,
+      SellerProfileComponent,
       SellerPageComponent
    ],
     providers: [],
@@ -50,7 +52,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         TabViewModule,
         DialogModule,
         BrowserAnimationsModule,
-        BadgeModule
+        BadgeModule,
+        
     ]
 })
 export class AppModule { }
