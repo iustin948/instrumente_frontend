@@ -17,12 +17,12 @@
 .header
 {
     
-    width:89%;
+    width:96%;
     margin:auto;
     max-width: 1800px;
     margin-top: 10px;
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:center;
 }
 
