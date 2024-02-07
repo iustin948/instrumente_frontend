@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SellerPageComponent } from './seller-page/seller-page.component';
 import { SellerProfileComponent } from './seller-profile/seller-profile.component';
 import { AddProductFormComponent } from './add-product-form/add-product-form.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [				
@@ -40,6 +41,7 @@ import { AddProductFormComponent } from './add-product-form/add-product-form.com
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
+        RouterModule,
         AppRoutingModule,
         ButtonModule,
         CardModule,
