@@ -1,12 +1,12 @@
 
 <div class="wrapper header">
   
-    <div class="" ><img class = 'logo'src="assets/logo.png" alt="logo"></div>
+    <div class="" ><img routerLink="/home" class = 'logo'src="assets/logo.png" alt="logo"></div>
       
       <div class="search-group" >
         
         <input class ='search-field' type="text">
-        <div class="search-button">
+        <div class="search-button" routerLink="/search">
           <img src="/assets/search-icon.svg" style="height:24px; ">
         </div>
       </div>
@@ -17,7 +17,7 @@
         <i class="pi pi-envelope "  pBadge value="2" style="font-size: 27px;"></i>
         <p-button (click)="showDialog()" icon="pi pi-user" label="Login"></p-button>
     
-        <p-button label="Adauga anunt"></p-button>
+        <p-button routerLink="/add" label="Adauga anunt"></p-button>
     </div>
   
 </div>
