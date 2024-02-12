@@ -7,6 +7,7 @@ import { SellerPageComponent } from './seller-page/seller-page.component';
 import { SellerProfileComponent } from './seller-profile/seller-profile.component';
 import { AddProductFormComponent } from './add-product-form/add-product-form.component';
 
+
 const routes: Routes = [
   {path:"home", component:HomePageComponent},
   {path:"product", component:ProductPageComponent},

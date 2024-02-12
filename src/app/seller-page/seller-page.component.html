@@ -56,38 +56,29 @@
     <header>
       <h1>Messaging App</h1>
   </header>
-
-  <div class="container">
-      <div id="contacts">
-          <div class="contact">John Doe</div>
-          <div class="contact">Jane Smith</div>
-          <div class="contact">Bob Johnson</div>
-          <!-- Add more contacts as needed -->
-      </div>
-
-      <div id="messages">
-         <p>hello</p>
-      </div>
-
-      <div id="inputBox">
-          <input type="text" id="messageInput" placeholder="Type your message...">
-          <button id="sendButton" onclick="sendMessage()">Send</button>
-      </div>
-  </div>
-
-  <script>
-      function sendMessage() {
-          // Add logic to send the message (for example, append it to the messages div)
-          const messageInput = document.getElementById('messageInput').value;
-          const messagesContainer = document.getElementById('messages');
-          const newMessage = document.createElement('div');
-          newMessage.textContent = 'You: ' + messageInput;
-          messagesContainer.appendChild(newMessage);
-          // Clear the input field
-          document.getElementById('messageInput').value = '';
-      }
-  </script>
-  </p-tabPanel>
+    <div class="chat-app">
+            <p-scrollPanel [style]="{ width: '500px', height: '300px' }" >
+              <div class="profiles-list">
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+                <div class="profile"> </div>
+            </div>
+          </p-scrollPanel>
+          <div class="messages">
+              <p align = "left" style = "background-color: cadetblue; border-radius: 5px;padding: 10px; display:inline-block; margin-right: 400px">Message from sender</p>
+              <p align = "right" style = "background-color: cadetblue; border-radius: 5px;padding: 10px; display:inline-block; margin-left: auto;">Message from receiver</p>
+          </div>
+        </div>
+            </p-tabPanel>
   <p-tabPanel header="Favorite">
     <div class="cards">
       <app-card></app-card>
@@ -98,6 +89,7 @@
       <app-card></app-card>
     </div>
   </p-tabPanel>
+
 </p-tabView>
 
 </div>

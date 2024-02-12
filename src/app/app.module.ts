@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductPageComponent } from './product-page/product-page.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CardComponent } from "./card/card.component";
@@ -24,7 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SellerPageComponent } from './seller-page/seller-page.component';
 import { SellerProfileComponent } from './seller-profile/seller-profile.component';
 import { AddProductFormComponent } from './add-product-form/add-product-form.component';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { RouterModule } from '@angular/router';
+
 
 @NgModule({
     declarations: [				
@@ -40,6 +42,7 @@ import { RouterModule } from '@angular/router';
     providers: [],
     bootstrap: [AppComponent],
     imports: [
+        HttpClientModule,
         BrowserModule,
         RouterModule,
         AppRoutingModule,
@@ -57,6 +60,7 @@ import { RouterModule } from '@angular/router';
         DialogModule,
         BrowserAnimationsModule,
         BadgeModule,
+        ScrollPanelModule,
         
     ]
 })
