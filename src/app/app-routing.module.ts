@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
-import { ProductPageComponent } from './product-page/product-page.component';
-import { SearchPageComponent } from './search-page/search-page.component';
-import { SellerPageComponent } from './seller-page/seller-page.component';
-import { SellerProfileComponent } from './seller-profile/seller-profile.component';
-import { AddProductFormComponent } from './add-product-form/add-product-form.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
+import { SearchPageComponent } from './components/search-page/search-page.component';
+import { SellerPageComponent } from './components/seller-page/seller-page.component';
+import { SellerProfileComponent } from './components/seller-profile/seller-profile.component';
+import { AddProductFormComponent } from './components/add-product-form/add-product-form.component';
 
 
 const routes: Routes = [

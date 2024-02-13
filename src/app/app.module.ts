@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { HeaderComponent } from './header/header.component';
-import { ProductPageComponent } from './product-page/product-page.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { CardComponent } from "./card/card.component";
+import { CardComponent } from "./components/card/card.component";
 import { GalleriaModule } from 'primeng/galleria';
-import { SearchPageComponent } from './search-page/search-page.component';
+import { SearchPageComponent } from './components/search-page/search-page.component';
 import { ScrollerModule } from 'primeng/scroller';
 import { SliderModule } from 'primeng/slider';
 import { FormsModule } from '@angular/forms'; 
@@ -21,11 +21,12 @@ import { TabViewModule } from 'primeng/tabview';
 import { BadgeModule } from 'primeng/badge';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SellerPageComponent } from './seller-page/seller-page.component';
-import { SellerProfileComponent } from './seller-profile/seller-profile.component';
-import { AddProductFormComponent } from './add-product-form/add-product-form.component';
+import { SellerPageComponent } from './components/seller-page/seller-page.component';
+import { SellerProfileComponent } from './components/seller-profile/seller-profile.component';
+import { AddProductFormComponent } from './components/add-product-form/add-product-form.component';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { RouterModule } from '@angular/router';
+import { ProductService } from './services/Product.service';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { RouterModule } from '@angular/router';
       SellerPageComponent,
       AddProductFormComponent
    ],
-    providers: [],
+    providers: [ProductService],
     bootstrap: [AppComponent],
     imports: [
         HttpClientModule,

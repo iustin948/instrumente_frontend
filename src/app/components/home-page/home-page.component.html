@@ -25,14 +25,7 @@
 
 
 <div class="cards">
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+  <app-card *ngFor="let item of products" [product]="item"></app-card>
 
 </div>
 
