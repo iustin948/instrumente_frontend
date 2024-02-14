@@ -15,4 +15,8 @@ getProducts()
   {
     return this.http.get<Product[]>(this.url);
   }
+
+// get new products;
+// getproduct(id)
+// 
 }
