@@ -16,7 +16,14 @@ getProducts()
     return this.http.get<Product[]>(this.url);
   }
 
-// get new products;
-// getproduct(id)
-// 
+getProductById(id : number)
+{
+  return this.http.get<Product>(this.url + "/" + id.toString());
+}
+ getNewProducts(numberOfProducts : number)
+ {
+    // to be implemented
+ }
+
+
 }
