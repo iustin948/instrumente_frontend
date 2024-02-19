@@ -20,10 +20,14 @@ getProductById(id : number)
 {
   return this.http.get<Product>(this.url + "/" + id.toString());
 }
- getNewProducts(numberOfProducts : number)
- {
-    // to be implemented
- }
+
+getNewProducts(category? : string)
+{
+    let URL = this.url + "/new";
+    if(category)
+      URL += "?category=" + category;
+    return this.http.get<Product[]>(URL);
+}
 
 
 }

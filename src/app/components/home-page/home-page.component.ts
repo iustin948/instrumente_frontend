@@ -17,7 +17,7 @@ export class HomePageComponent implements OnInit {
   products: Product[] = [];
 
   fetchProducts() {
-    this.productService.getProducts()
+    this.productService.getNewProducts()
       .subscribe((products: Product[]) => {
         this.products = products;
       });
