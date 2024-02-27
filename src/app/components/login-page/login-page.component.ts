@@ -1,0 +1,52 @@
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/Auth.service';
+
+@Component({
+  selector: 'app-login-page',
+  templateUrl: './login-page.component.html',
+  styleUrls: ['./login-page.component.css'],
+  encapsulation: ViewEncapsulation.None 
+})
+export class LoginPageComponent implements OnInit {
+
+  loginForm !: FormGroup
+  registerForm !: FormGroup
+  constructor(private authService : AuthService) { }
+
+  ngOnInit() {
+    this.loginForm = new FormGroup(
+      {
+        email: new FormControl('',[Validators.required,Validators.email]),
+        password: new FormControl('', [Validators.required])
+      }
+    )
+
+    this.registerForm = new FormGroup(
+      {
+        
+        email: new FormControl('',[Validators.required,Validators.email]),
+        password: new FormControl('', [Validators.required]),
+        firstName: new FormControl('', [Validators.required]),
+        lastName: new FormControl('', [Validators.required])
+      }
+    )
+  }
+
+  onLoginSubmit() {
+    if (this.loginForm.valid) {
+      //console.log(this.loginForm.value);
+      this.authService.login(this.loginForm.value )
+      .subscribe(res => console.log(res))
+    }
+  }
+
+  onRegisterSubmit() {
+    if (this.registerForm.valid) {
+      console.log(this.registerForm.value);
+      this.authService.register(this.registerForm.value)
+      .subscribe(res => console.log(res))
+    }
+  }
+
+}

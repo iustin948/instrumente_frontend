@@ -27,7 +27,8 @@ import { AddProductFormComponent } from './components/add-product-form/add-produ
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { RouterModule } from '@angular/router';
 import { ProductService } from './services/Product.service';
-
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [				
@@ -38,7 +39,8 @@ import { ProductService } from './services/Product.service';
       SearchPageComponent,
       SellerProfileComponent,
       SellerPageComponent,
-      AddProductFormComponent
+      AddProductFormComponent,
+      LoginPageComponent
    ],
     providers: [ProductService],
     bootstrap: [AppComponent],
@@ -62,6 +64,7 @@ import { ProductService } from './services/Product.service';
         BrowserAnimationsModule,
         BadgeModule,
         ScrollPanelModule,
+        ReactiveFormsModule,
         
     ]
 })

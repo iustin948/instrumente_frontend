@@ -1,0 +1,32 @@
+
+  
+<div class="wrapper ">
+  <div id="formContent">
+<p-tabView>
+  <p-tabPanel header="Login">
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+      <input type="text" formControlName="email" placeholder="email">
+      <input type="password" formControlName="password" placeholder="password">
+      <input type="submit"  value="Log In">
+    </form>
+  </p-tabPanel>
+  <p-tabPanel header="Register">
+    <form [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()">
+      
+      
+      <input type="text" formControlName="lastName"  placeholder="Nume">
+      <input type="text" formControlName="firstName"  placeholder="Prenume">
+        
+      <input type="text" formControlName="email" placeholder="email">
+      <input type="password" formControlName="password" placeholder="password">
+      <input type="submit"  value="Register">
+    </form>
+  </p-tabPanel>
+
+</p-tabView>
+<div id="formFooter">
+  <a class="underlineHover" href="#">Forgot Password?</a>
+</div>
+</div>
+</div>
+

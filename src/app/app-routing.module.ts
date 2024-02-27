@@ -6,6 +6,7 @@ import { SearchPageComponent } from './components/search-page/search-page.compon
 import { SellerPageComponent } from './components/seller-page/seller-page.component';
 import { SellerProfileComponent } from './components/seller-profile/seller-profile.component';
 import { AddProductFormComponent } from './components/add-product-form/add-product-form.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:"seller", component:SellerPageComponent},
   {path:"profile", component:SellerProfileComponent},
   {path:"add", component:AddProductFormComponent},
+  {path:"login", component:LoginPageComponent},
 ];
 
 @NgModule({
