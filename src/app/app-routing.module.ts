@@ -7,15 +7,16 @@ import { SellerPageComponent } from './components/seller-page/seller-page.compon
 import { SellerProfileComponent } from './components/seller-profile/seller-profile.component';
 import { AddProductFormComponent } from './components/add-product-form/add-product-form.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { authGuard } from './auth.guard';
 
 
 const routes: Routes = [
-  {path:"home", component:HomePageComponent},
+  {path:"home", component:HomePageComponent },
   {path:"product", component:ProductPageComponent},
   {path:"search", component:SearchPageComponent},
   {path:"seller", component:SellerPageComponent},
   {path:"profile", component:SellerProfileComponent},
-  {path:"add", component:AddProductFormComponent},
+  {path:"add", component:AddProductFormComponent,canActivate: [authGuard]},
   {path:"login", component:LoginPageComponent},
 ];
 

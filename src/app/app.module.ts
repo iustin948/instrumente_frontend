@@ -29,6 +29,7 @@ import { RouterModule } from '@angular/router';
 import { ProductService } from './services/Product.service';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { authGuard } from './auth.guard';
 
 @NgModule({
     declarations: [				

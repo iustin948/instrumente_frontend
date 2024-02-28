@@ -8,7 +8,7 @@ export class AuthService {
 constructor(private http : HttpClient) { }
 
 url = "http://localhost:8080";
-
+redirectUrl : string | null = null;
 login(user: any){
   return this.http.post<any>(this.url + "/login",user)
 }

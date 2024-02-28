@@ -7,5 +7,5 @@ export interface User {
     email: string;
     phoneNumber: string;
     registrationDate: Date | null;
-    rating: number;
+    rating: number;   
 }

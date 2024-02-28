@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/Auth.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginPageComponent implements OnInit {
 
   loginForm !: FormGroup
   registerForm !: FormGroup
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService, private router :Router) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup(
@@ -41,6 +42,8 @@ export class LoginPageComponent implements OnInit {
       .subscribe(res => {
         console.log(res)
         localStorage.setItem('token', res.token)
+        let redirectUrl = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/defaultPageAfterLogin';
+        this.router.navigateByUrl(redirectUrl);
       }
       )
     }
@@ -53,6 +56,8 @@ export class LoginPageComponent implements OnInit {
       .subscribe(res => {
         console.log(res)
         localStorage.setItem('token', res.token)
+        let redirectUrl = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/defaultPageAfterLogin';
+        this.router.navigateByUrl(redirectUrl);
       }
         )
     }

@@ -11,6 +11,8 @@ constructor(private http : HttpClient) { }
 
 url = "http://localhost:8080/products";
 
+
+
  getUsers(){
   return this.http.get<User[]>(this.url);
 }
