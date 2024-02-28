@@ -34,10 +34,15 @@ export class LoginPageComponent implements OnInit {
   }
 
   onLoginSubmit() {
+    console.log(this.loginForm.valid);
     if (this.loginForm.valid) {
       //console.log(this.loginForm.value);
       this.authService.login(this.loginForm.value )
-      .subscribe(res => console.log(res))
+      .subscribe(res => {
+        console.log(res)
+        localStorage.setItem('token', res.token)
+      }
+      )
     }
   }
 
@@ -45,7 +50,11 @@ export class LoginPageComponent implements OnInit {
     if (this.registerForm.valid) {
       console.log(this.registerForm.value);
       this.authService.register(this.registerForm.value)
-      .subscribe(res => console.log(res))
+      .subscribe(res => {
+        console.log(res)
+        localStorage.setItem('token', res.token)
+      }
+        )
     }
   }
 
