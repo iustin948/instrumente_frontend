@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CardComponent } from "./components/card/card.component";
@@ -30,6 +30,7 @@ import { ProductService } from './services/Product.service';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { authGuard } from './auth.guard';
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
 @NgModule({
     declarations: [				
@@ -43,7 +44,12 @@ import { authGuard } from './auth.guard';
       AddProductFormComponent,
       LoginPageComponent
    ],
-    providers: [ProductService],
+    providers: [ProductService,
+    {
+        provide: HTTP_INTERCEPTORS,
+        useClass: TokenInterceptorService,
+        multi: true
+    }],
     bootstrap: [AppComponent],
     imports: [
         HttpClientModule,

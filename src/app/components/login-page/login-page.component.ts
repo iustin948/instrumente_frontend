@@ -42,7 +42,7 @@ export class LoginPageComponent implements OnInit {
       .subscribe(res => {
         console.log(res)
         localStorage.setItem('token', res.token)
-        let redirectUrl = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/defaultPageAfterLogin';
+        let redirectUrl = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/home';
         this.router.navigateByUrl(redirectUrl);
       }
       )
@@ -56,7 +56,7 @@ export class LoginPageComponent implements OnInit {
       .subscribe(res => {
         console.log(res)
         localStorage.setItem('token', res.token)
-        let redirectUrl = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/defaultPageAfterLogin';
+        let redirectUrl = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/home';
         this.router.navigateByUrl(redirectUrl);
       }
         )
