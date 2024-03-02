@@ -31,6 +31,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { authGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { FileUploadModule } from 'primeng/fileupload';
 
 @NgModule({
     declarations: [				
@@ -72,6 +73,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
         BadgeModule,
         ScrollPanelModule,
         ReactiveFormsModule,
+        FileUploadModule,
         
     ]
 })

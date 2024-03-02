@@ -3,7 +3,7 @@ export interface Product {
   title: string;
   description: string;
   price: number;
-  category: string;
+  category: number;
   postedDate: Date | null;
   seller: string | null;
 }

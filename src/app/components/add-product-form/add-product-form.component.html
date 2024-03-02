@@ -1,27 +1,24 @@
 <div class="container">
   <h1>Adauga un Anunt</h1>
-  <form action="#" method="post">
-      <label for="titlu">Titlu:</label>
-      <input type="text" id="titlu" name="titlu" required>
-
-      <label for="descriere">Descriere:</label>
-      <textarea id="descriere" name="descriere" rows="4" required></textarea>
-
-      <label for="pret">Pret:</label>
-      <input type="text" id="pret" name="pret" required>
-
-      <label for="categorie">Categorie:</label>
-      <select id="categorie" name="categorie" required>
-          <option value="electronice">Electronice</option>
-          <option value="imobiliare">Imobiliare</option>
-          <option value="vehicule">Vehicule</option>
-          <!-- Adăugați mai multe opțiuni de categorie aici -->
-
-      </select>
-
-      <label for="imagini">Imagini (URL separate prin virgulă):</label>
-      <input type="text" id="imagini" name="imagini" required>
-
-      <button type="submit">Adauga Anunt</button>
+  <form [formGroup]="addProductForm" (ngSubmit)="OnProductSubmit()">
+    <input type="text" formControlName="title" placeholder="Titlu">
+    <textarea type="text" formControlName="description" placeholder="Descriere" rows=4></textarea>
+    <input type="text" formControlName="price" placeholder="Price">
+    <select formControlName="categoryId" id="category" class="form-control">
+      <option value="">Select a category</option>
+      <option *ngFor="let category of categories" [value]="category.id">
+        {{ category.name }}
+      </option>
+    </select>
+    <select formControlName="condition"class="form-control" >
+      <option value="">Selecteaza conditia</option>
+      <option value="Nou">Nou</option>
+      <option value="Folosita">Folosita</option>
+      <option value="Uzata">Uzata</option>
+    </select>
+    <p-fileUpload name="myfile[]" (onSelect)="onUpload($event)" [multiple]="true" accept="image/*" [maxFileSize]="1000000"> </p-fileUpload>
+  
+    <p-button type ="submit">Submit</p-button>
   </form>
+  
 </div>

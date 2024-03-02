@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { User } from '../models/user';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
+sessionUser !: User
 constructor(private http : HttpClient) { }
 
 url = "http://localhost:8080";
@@ -19,7 +20,10 @@ register(user: any){
 
 loggedIn()
 {
-  return !!localStorage.getItem('token')
+  let token = this.getToken();
+  if(!token)
+    return false;
+   return true;
 }
 
 getToken()
@@ -27,4 +31,13 @@ getToken()
   return localStorage.getItem('token')
 }
 
+getHeader()
+{
+  let token = this.getToken();
+  if(!token)
+    return false;
+  return new HttpHeaders().set('Authorization', `Bearer ${token}`);
 }
+
+}
+
