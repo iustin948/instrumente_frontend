@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../models/user';
+import { tap } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +12,7 @@ constructor(private http : HttpClient) { }
 url = "http://localhost:8080";
 redirectUrl : string | null = null;
 login(user: any){
+  
   return this.http.post<any>(this.url + "/login",user)
 }
 
@@ -37,6 +39,12 @@ getHeader()
   if(!token)
     return false;
   return new HttpHeaders().set('Authorization', `Bearer ${token}`);
+}
+
+getUserId() 
+{
+  let userId = window.localStorage.getItem('userId'); 
+  return userId ? parseInt(userId) : 0
 }
 
 }

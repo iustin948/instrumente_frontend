@@ -12,18 +12,21 @@
       </div>
       
       <div class="account-nav">  
-        <img src="/assets/heart.svg" class="svg" >
+        <img *ngIf="isLoggedIn" src="/assets/heart.svg" class="svg" >
 
-        <i class="pi pi-envelope "  pBadge value="2" style="font-size: 27px;"></i>
-        <p-button routerLink="/login" icon="pi pi-user" label="Login"></p-button>
-    
+        <i   *ngIf="isLoggedIn" class="pi pi-envelope "  pBadge value="2" style="font-size: 27px;"></i>
+        <p-button *ngIf="!isLoggedIn" routerLink="/login" icon="pi pi-user" label="Login"></p-button>
+        
+        
+        <p-menu #menu [model]="menuItems" [popup]="true"></p-menu>
+        <button *ngIf="isLoggedIn" pButton type="button" (click)="menu.toggle($event)" icon="pi pi-bars" label="Contul tau  "></button>
         <p-button routerLink="/add" label="Adauga anunt"></p-button>
     </div>
   
 </div>
 <hr>
 <div class="menu-bar">
-  <p-megaMenu [model]="items"></p-megaMenu>
+  <p-megaMenu [model]="categories"></p-megaMenu>
 </div>
 <hr>
 

@@ -21,5 +21,8 @@ export class HomePageComponent implements OnInit {
       .subscribe((products: Product[]) => {
         this.products = products;
       });
+    
+      for(let i=0 ;i < this.products.length; i++)
+          console.log(this.products[i]);
   }
 }

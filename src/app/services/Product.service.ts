@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
 import { Form } from '@angular/forms';
 import { User } from '../models/user';
+import { AuthService } from './Auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-constructor(private http : HttpClient) { }
+constructor(private http : HttpClient, private authService :AuthService) { }
 
  url = "http://localhost:8080";
 
@@ -21,6 +22,11 @@ getProducts()
 getProductById(id : number)
 {
   return this.http.get<Product>(this.url + "/products/" + id.toString());
+}
+
+getProductBySellerId(id : number)
+{
+  return this.http.get<Product[]>(this.url + "/products/seller/" + id.toString())
 }
 
 addProduct(formData : FormData)

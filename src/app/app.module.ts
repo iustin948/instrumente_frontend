@@ -32,6 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { authGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { FileUploadModule } from 'primeng/fileupload';
+import { MenuModule } from 'primeng/menu';
+
 
 @NgModule({
     declarations: [				
@@ -74,6 +76,7 @@ import { FileUploadModule } from 'primeng/fileupload';
         ScrollPanelModule,
         ReactiveFormsModule,
         FileUploadModule,
+        MenuModule,
         
     ]
 })

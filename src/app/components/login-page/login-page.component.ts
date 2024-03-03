@@ -40,8 +40,7 @@ export class LoginPageComponent implements OnInit {
       //console.log(this.loginForm.value);
       this.authService.login(this.loginForm.value )
       .subscribe(res => {
-        this.authService.sessionUser = res;
-        console.log(res)
+        localStorage.setItem("userId",res.id)
         localStorage.setItem('token', res.token)
         let redirectUrl = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/home';
         this.router.navigateByUrl(redirectUrl);
@@ -56,8 +55,9 @@ export class LoginPageComponent implements OnInit {
       this.authService.register(this.registerForm.value)
       .subscribe(res => {
         this.authService.sessionUser = res;
-        console.log(res)
+        localStorage.setItem("userId",res.id)
         localStorage.setItem('token', res.token)
+      
         let redirectUrl = this.authService.redirectUrl ? this.router.parseUrl(this.authService.redirectUrl) : '/home';
         this.router.navigateByUrl(redirectUrl);
       }

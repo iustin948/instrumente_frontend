@@ -34,7 +34,8 @@ export class AddProductFormComponent implements OnInit {
         description: new FormControl('', [Validators.required]), // Use empty string
         price: new FormControl('', [Validators.required]), // Use empty string
         categoryId: new FormControl('', [Validators.required]), // Use empty string or null if it's a dropdown
-        condition: new FormControl('',[Validators.required])
+        condition: new FormControl('',[Validators.required]),
+        location: new FormControl('',[Validators.required])
       }
       );
     }

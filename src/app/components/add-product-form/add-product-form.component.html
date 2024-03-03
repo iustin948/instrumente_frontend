@@ -3,7 +3,9 @@
   <form [formGroup]="addProductForm" (ngSubmit)="OnProductSubmit()">
     <input type="text" formControlName="title" placeholder="Titlu">
     <textarea type="text" formControlName="description" placeholder="Descriere" rows=4></textarea>
-    <input type="text" formControlName="price" placeholder="Price">
+    <input type="text" formControlName="price" placeholder="Pret">
+    <input type="text" formControlName="location" placeholder="Oras">
+  
     <select formControlName="categoryId" id="category" class="form-control">
       <option value="">Select a category</option>
       <option *ngFor="let category of categories" [value]="category.id">

@@ -1,27 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { MegaMenuItem } from 'primeng/api';
+import { MegaMenuItem, MenuItem } from 'primeng/api';
 import { ElementRef } from '@angular/core';
+import { AuthService } from 'src/app/services/Auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-closeDialog() {
-  this.visible = false;
-}
-showDialog() {
-  this.visible = true;
-  console.log(this.visible);
+
+categories: MegaMenuItem[];
+menuItems!: MenuItem[];
+public get isLoggedIn(): boolean {
+  return this.authService.loggedIn();
 }
 
-items: MegaMenuItem[];
-visible: boolean;
-  
-
-  constructor(private el: ElementRef) {
-    this.visible = false;
-    this.items = [ 
+  constructor(private el: ElementRef, private authService:AuthService, private router: Router) {
+    
+    this.categories = [ 
          { 
         label: 'Categorie', 
         items: [ 
@@ -50,12 +47,40 @@ visible: boolean;
       
     ]; 
     for (let i = 0; i < 7; i++) {
-      this.items.push(this.items[0])
+      this.categories.push(this.categories[0])
     }
     
-   
+    this.menuItems = [
+      {
+        label: 'Contul meu',
+        icon: 'pi pi-cog',
+        command: () => {
+          router.navigateByUrl("/seller")
+        }
+      },
+      {
+        label: 'Products',
+        icon: 'pi pi-fw pi-list',
+        command: () => {
+         
+          console.log("products")
+        }
+      },
+      {
+        label: 'Iesire din cont',
+        icon: ' pi pi-sign-out',
+        command: () => {
+         
+            window.localStorage.removeItem("token");
+            window.localStorage.removeItem("userId");
+            router.navigateByUrl("/home");
+        }
+      },
+    ]
 
   }
   ngOnInit() {
+
+   
   }
 }

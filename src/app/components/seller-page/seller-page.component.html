@@ -3,31 +3,15 @@
   <p-tabPanel header="Anunturi">
     <p-tabView>
       <p-tabPanel header="Active">
-         
-            <div class="cards">
-              <app-card></app-card>
-              <app-card></app-card>
-              <app-card></app-card>
-              <app-card></app-card>
-              <app-card></app-card>
-              <app-card></app-card>
-            </div>
-          
+        <app-card *ngFor="let item of userProducts" [product]="item"></app-card>  
       </p-tabPanel>
       <p-tabPanel header="Inactive">
-        <div class="cards">
-          <app-card></app-card>
-          <app-card></app-card>
-          <app-card></app-card>
-          <app-card></app-card>
-          <app-card></app-card>
-          <app-card></app-card>
-        </div>
+       
       </p-tabPanel>
       
   </p-tabView>
      
-    
+  
   </p-tabPanel>
   <p-tabPanel header="Setari">
     <header>
