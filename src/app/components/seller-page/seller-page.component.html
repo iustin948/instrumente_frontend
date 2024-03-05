@@ -2,8 +2,9 @@
 <p-tabView>
   <p-tabPanel header="Anunturi">
     <p-tabView>
-      <p-tabPanel header="Active">
-        <app-card *ngFor="let item of userProducts" [product]="item"></app-card>  
+      <p-tabPanel header="Active" >
+
+        <div class="cards"><app-card *ngFor="let item of userProducts" [product]="item"></app-card>  </div>
       </p-tabPanel>
       <p-tabPanel header="Inactive">
        

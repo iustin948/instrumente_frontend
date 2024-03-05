@@ -14,7 +14,7 @@
       <div class="account-nav">  
         <img *ngIf="isLoggedIn" src="/assets/heart.svg" class="svg" >
 
-        <i   *ngIf="isLoggedIn" class="pi pi-envelope "  pBadge value="2" style="font-size: 27px;"></i>
+        <i   *ngIf="isLoggedIn" class="pi pi-envelope " routerLink="/seller" pBadge value="2" style="font-size: 27px;"></i>
         <p-button *ngIf="!isLoggedIn" routerLink="/login" icon="pi pi-user" label="Login"></p-button>
         
         

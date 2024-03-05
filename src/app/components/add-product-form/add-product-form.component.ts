@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Category } from 'src/app/models/Category';
+import { AuthService } from 'src/app/services/Auth.service';
 import { ProductService } from 'src/app/services/Product.service';
 @Component({
   selector: 'app-add-product-form',
@@ -25,7 +26,7 @@ export class AddProductFormComponent implements OnInit {
   ];
 
   
-  constructor(private productService : ProductService) { }
+  constructor(private productService : ProductService, private authService :AuthService) { }
   
   ngOnInit() {
     this.addProductForm = new FormGroup(
@@ -34,8 +35,9 @@ export class AddProductFormComponent implements OnInit {
         description: new FormControl('', [Validators.required]), // Use empty string
         price: new FormControl('', [Validators.required]), // Use empty string
         categoryId: new FormControl('', [Validators.required]), // Use empty string or null if it's a dropdown
-        condition: new FormControl('',[Validators.required]),
-        location: new FormControl('',[Validators.required])
+        productCondition: new FormControl('',[Validators.required]),
+        location: new FormControl('',[Validators.required]),
+        seller: new FormControl(this.authService.getUserId(),[Validators.required])
       }
       );
     }
@@ -57,7 +59,8 @@ export class AddProductFormComponent implements OnInit {
           const file = this.selectedFiles[i];
           formData.append(`file`, file, file.name.replaceAll(" ","_"));
         }
-        console.log(JSON.stringify(this.addProductForm.value))
+        console.log(this.addProductForm.value)
+       
         formData.append('product',JSON.stringify(this.addProductForm.value))
         
         return this.productService.addProduct(formData).subscribe(res => console.log(res));

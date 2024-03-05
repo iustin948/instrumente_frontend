@@ -6,6 +6,7 @@ export interface Product {
   photoUrl: String[];
   location: String;
   category: number;
-  postedDate: Date | null;
-  seller: string | null;
+  postedDate: Date;
+  seller: string;
+  productCondition: string;
 }
