@@ -33,6 +33,7 @@ import { authGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { FileUploadModule } from 'primeng/fileupload';
 import { MenuModule } from 'primeng/menu';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -77,6 +78,7 @@ import { MenuModule } from 'primeng/menu';
         ReactiveFormsModule,
         FileUploadModule,
         MenuModule,
+        CommonModule,
         
     ]
 })

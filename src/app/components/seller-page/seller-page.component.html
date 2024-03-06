@@ -1,5 +1,5 @@
 <div class="wrapper">
-<p-tabView>
+<p-tabView (onChange)="fetchFavoriteProducts()">
   <p-tabPanel header="Anunturi">
     <p-tabView>
       <p-tabPanel header="Active" >
@@ -66,12 +66,7 @@
             </p-tabPanel>
   <p-tabPanel header="Favorite">
     <div class="cards">
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
+      <app-card *ngFor="let item of favoriteProducts" [product]="item"></app-card>
     </div>
   </p-tabPanel>
 

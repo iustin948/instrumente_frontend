@@ -1,3 +1,4 @@
+<div pButton type="button" (click)="toggleHeart()" class ="pi pi-heart heart"[ngClass]="{'pi-heart': !isHeartRed, 'pi-heart-fill': isHeartRed}" [class.red-heart]="isHeartRed" style="color:rgb(192, 56, 56)"></div>
 <div class="card"  *ngIf="product" (click)="navigateToProduct()">
     <img  class="photo" [src]="'http://127.0.0.1:8081/' + product.photoUrl[0]"   alt="">
     <div class="info">

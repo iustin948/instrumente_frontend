@@ -10,7 +10,25 @@
    
 }
 
+.heart
+{
+    position:relative;
+    left: 230px;
+    top: 270px;
+    font-size: 25px;
+    z-index: 10;
+    border-radius: 10px;
+    width:40px;
+    height: 40px;
+    text-align: center;
+    padding: 6px;
+}
 
+.heart:hover
+{
+    border-style: solid;
+    border-color: pink;
+}
 
 .photo
 {
